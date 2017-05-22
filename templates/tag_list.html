@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="posts">
+    {% for post in post_list %}
+        <section class="post">
+            <header class="post-header">
+                <h5 class="post-title"><a class="post-author" href="{% url 'label' tag=post.category %}">{{ post.category }}</a></h5>
+            </header>
+        </section>
+    {% endfor %}
+</div>
+{% endblock %}

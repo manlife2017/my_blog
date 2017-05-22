@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="posts">
+    {% if error %}
+    <h2>没有检索到相关文章</h2>
+    {% else %}
+    {% for post in post_list %}
+        <section class="post">
+            <header class="post-header">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <p class="post-meta">
+                    Time : <a class="post-author" href="{% url 'detail' id=post.id %}">{{ post.date_time }}</a>
+                    <a class="post-author" href="{% url 'label' tag=post.category %}" >{{ post.category }}</a>
+                </p>
+            </header>
+        </section>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

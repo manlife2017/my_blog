@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load custom_markdown %}
+
+{% block content %}
+<div class="post">
+    <section class="post">
+        <div class="post_header">
+            <img src="{% static 'images/icon.png' %}" width="80px" height="80px" style="border-radius: 40px">
+        </div>
+        <div class="post_description">
+            <p class="me_info_name">name: answer</p>
+            <p class="me_info_gender">gender: man</p>
+            <p class="me_info_address">address: Zhejiang</p>
+            <p class="me_info_contact_way">_______________________</p>
+            <div class="me_info_code" style="display: none;">
+                <img src="{% static 'images/weixin.png' %}" style="width: 100px;height: 100px;border-radius: 30px">
+            </div>
+        </div>
+    </section>
+{#    <div class="header"><img src="{% static 'images/me.jpg' %}" width="100px" height="100px" style="border-radius: 20px"></div>#}
+</div>
+{% endblock %}
